@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "IIT BHU Feedback Form Filler",
+  "description": "Click this button to select all radio buttons on 1st column of the current website.",
+  "version": "0.0.0.1",
+  "browser_action": {
+    "default_icon": "icon.png",
+	"default_title": "IIT BHU Form Filler"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["main.js"],
+    "persistent": false
+  }
+}
