@@ -10,7 +10,10 @@ function autoFill () {
     			while (j < document.forms[i].length - 1 && lastName == document.forms[i].elements[j+1].name) {
     				j++;
     			}
-    			document.forms[i].elements[start].checked = true;
+                var min=0; 
+    	        var max=4; // Let's not give `poor` feedback to anyone
+	            var ran = Math.floor(Math.random() * (+max - +min)) + +min;
+    			document.forms[i].elements[start + ran].checked = true; // in case, you want to give Excellent feedback, remove `ran`
     		}
     	}
     }
